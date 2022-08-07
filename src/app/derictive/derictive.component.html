@@ -1,0 +1,67 @@
+<div *ngIf="courses.length > 0 then listeCourse else noCourses"></div>
+<ng-template #listeCourse>
+  Liste de mes cours
+</ng-template>
+<ng-template #noCourses>
+   pas de cours
+</ng-template>
+<br>
+2)
+<br>
+<div [hidden]="courses.length== 0">
+  liste de mes course
+</div>
+<div [hidden]="courses.length > 0">
+  pas de course
+</div>
+3)ngswitchcase
+<br>
+<ul class="nav nav-pills">
+  <li [class.active] = "viewCourse == 'Laravel'"><a (click)="viewCourse = 'Laravel'" >Laravel</a></li>
+  <li [class.active] = "viewCourse == 'Angular'"><a (click)="viewCourse = 'Angular'">Angular</a></li>
+  <li [class.active] = "viewCourse == 'VueJs'"><a (click)="viewCourse = 'VueJs'">VueJs</a></li>
+</ul>
+
+<div [ngSwitch]="viewCourse" >
+  <div *ngSwitchCase="'Laravel'">lorem Laravel</div>
+  <div *ngSwitchCase="'Angular'">lorem Angular</div>
+  <div *ngSwitchCase="'VueJs'">lorem VueJs</div>
+  <div *ngSwitchDefault>Autre chose ...</div>
+</div>
+4)ng for
+<br>
+
+<div>
+  <ul>
+    <li *ngFor="let course of coursess;let index = index;even as e;first as f;last as l" >
+      <span *ngIf="e" >even </span><span *ngIf="f"> first</span><span *ngIf="l"> last</span> index : {{index}}, id : {{course.id}}, titre : {{course.title}}
+    </li>
+  </ul>
+</div>
+
+5)ng for
+<br>
+
+<button class="btn btn-success" (click)="addcourses()" >Ajouter</button>
+  <ul>
+    <li *ngFor="let course of coursess" >
+    id : {{course.id}}, titre : {{course.title}}
+    <button class="btn btn-danger"  (click)="removeCourse(course)">Delete</button>
+    <button class="btn btn-warning"  (click)="editCourse(course)">Edit</button>
+    </li>
+  </ul>
+
+
+6)ngfor trackby
+<br>
+
+<button class="btn btn-info" (click)="laodCourses()" >Laod</button>
+  <ul>
+    <li *ngFor="let course of coursess; trackBy:trackCourse" >
+    id : {{course.id}}, titre : {{course.title}}
+    <button class="btn btn-danger"  (click)="removeCourse(course)">Delete</button>
+    <button class="btn btn-warning"  (click)="editCourse(course)">Edit</button>
+    </li>
+  </ul>
+
+

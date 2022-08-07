@@ -1,0 +1,69 @@
+<app-course></app-course>
+<hr style="color: red; height:30px">
+
+two - way binding
+
+<br><br><br><br><br>
+<app-two-way></app-two-way>
+
+
+<br><br>
+<p>{{body | resume}}</p>
+
+<br>
+//              input              and       output
+<br>
+<app-ex [is-fav] ="post.isFavorite" (change)="maFonction($event)"></app-ex>
+<br><br><br><br>
+panel : ng-content :
+
+<br><br>
+
+<app-panel>
+  <div class="header">header</div>
+  <div class="body">
+    <h1>lorem epsum</h1>
+    <p>hello lorem cv</p>
+  </div>
+</app-panel>
+<hr style="color: red; height:30px">
+<hr style="color: red; height:30px">
+<hr style="color: red; height:30px">
+<hr style="color: red; height:30px">
+
+<router-outlet></router-outlet>
+<br><br>
+
+// propre directive
+<input type="text"  appInputFormat [format] = "''" >
+
+<br><br>
+
+////////////////////Gestion des forms
+<hr style="color: red; height:30px">
+<hr style="color: red; height:30px">
+<hr style="color: red; height:-16px">
+<hr style="color: red; width:30px">
+
+<div class="container">
+  <div class="col-md-6 col-md-offset-3">
+    <app-contact-form></app-contact-form>
+  </div>
+</div>
+
+
+////////////////////Reactive Forms
+<hr style="color: red; height:30px">
+<hr style="color: red; height:30px">
+<hr style="color: red; height:-16px">
+<hr style="color: red; width:30px">
+
+<div class="container">
+  <div class="col-md-6 col-md-offset-3">
+    <app-sign-up-form></app-sign-up-form>
+  </div>
+</div>
+
+
+
+<br><br><br><br><br><br>

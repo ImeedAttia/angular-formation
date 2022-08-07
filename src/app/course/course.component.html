@@ -1,0 +1,17 @@
+<p>course works!</p>
+
+<div (click)="OnClickDiv()" >
+<button class="btn btn-primary" (click)="onClick($event)" >hello</button>
+
+</div>
+
+
+
+PArite 2
+<br>
+
+<input type="text" (keyup.enter)="onKey()" > try 1
+<br>
+<input type="text" (keyup.enter)="onKey1($event)" >  try 2
+<br>
+<input #email type="text" (keyup.enter)="onKey2(email)" >  try 3
