@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-
+import { HttpClientModule } from '@angular/common/http';
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -15,6 +15,7 @@ import { DerictiveComponent } from './derictive/derictive.component';
 import { InputFormatDirective } from './input-format.directive';
 import { ContactFormComponent } from './contact-form/contact-form.component';
 import { SignUpFormComponent } from './sign-up-form/sign-up-form.component';
+import { ApiPostsComponent } from './api-posts/api-posts.component';
 
 @NgModule({
   declarations: [
@@ -27,14 +28,17 @@ import { SignUpFormComponent } from './sign-up-form/sign-up-form.component';
     DerictiveComponent,
     InputFormatDirective,
     ContactFormComponent,
-    SignUpFormComponent
+    SignUpFormComponent,
+    ApiPostsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule,
   ],
+
   providers: [CourseComponent,TwoWayComponent,ExComponent],
   bootstrap: [AppComponent]
 })
