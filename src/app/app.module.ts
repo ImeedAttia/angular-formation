@@ -16,7 +16,9 @@ import { InputFormatDirective } from './input-format.directive';
 import { ContactFormComponent } from './contact-form/contact-form.component';
 import { SignUpFormComponent } from './sign-up-form/sign-up-form.component';
 import { ApiPostsComponent } from './api-posts/api-posts.component';
-
+import { PostService } from './Service/post.service';
+import { DataService } from './Service/data.service';
+import { GithubFollowersComponent } from './github-followers/github-followers.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,17 +31,19 @@ import { ApiPostsComponent } from './api-posts/api-posts.component';
     InputFormatDirective,
     ContactFormComponent,
     SignUpFormComponent,
-    ApiPostsComponent
+    ApiPostsComponent,
+    GithubFollowersComponent
   ],
   imports: [
-    BrowserModule,
+
+BrowserModule,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
   ],
 
-  providers: [CourseComponent,TwoWayComponent,ExComponent],
+  providers: [CourseComponent,TwoWayComponent,ExComponent,PostService,DataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
