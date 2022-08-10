@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { ExerciceService } from './../Service/exercice.service';
 
 @Component({
@@ -28,6 +29,8 @@ get(){
     console.log(error)
    })
 }
+
+
 
 
   }

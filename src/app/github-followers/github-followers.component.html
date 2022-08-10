@@ -2,7 +2,13 @@
   <img [src]="item.avatar_url" class="card-img-top" alt="...">
   <div class="card-body">
     <h5 class="card-title">{{item.login}}</h5>
-    <a href="item.html_url" class="btn btn-primary">Go To Profile</a>
-
+    <a
+      [queryParams]="{page : 1,type : item.type,var :'val'}"
+      [routerLink]="['/api',item.id,item.login ]"
+      class="btn btn-primary"
+     >
+     Go To Profile
+    </a>
   </div>
 </div>
+

@@ -19,6 +19,9 @@ import { ApiPostsComponent } from './api-posts/api-posts.component';
 import { PostService } from './Service/post.service';
 import { DataService } from './Service/data.service';
 import { GithubFollowersComponent } from './github-followers/github-followers.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { ApiFollowerComponent } from './api-follower/api-follower.component';
+import { NavbarComponent } from './navbar/navbar.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,7 +35,10 @@ import { GithubFollowersComponent } from './github-followers/github-followers.co
     ContactFormComponent,
     SignUpFormComponent,
     ApiPostsComponent,
-    GithubFollowersComponent
+    GithubFollowersComponent,
+    PageNotFoundComponent,
+    ApiFollowerComponent,
+    NavbarComponent
   ],
   imports: [
 
@@ -41,6 +47,8 @@ BrowserModule,
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
+    
+
   ],
 
   providers: [CourseComponent,TwoWayComponent,ExComponent,PostService,DataService],
